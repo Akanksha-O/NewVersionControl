@@ -8,6 +8,11 @@ client = MongoClient("mongodb+srv://akankshaojhainfo_db_user:onuIZ2BzLw5lMIE5@cl
 db = client["todo_db"]
 collection = db["items"]
 
+@app.route('/todo')
+def todo():
+    return render_template('todo.html')
+
+
 @app.route('/submittodoitem', methods=['POST'])
 def submit_todo():
     itemName = request.form.get("itemName")
