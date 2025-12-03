@@ -24,5 +24,6 @@ def submit_todo():
     }
 
     collection.insert_one(data)
+    #return a success message
 
     return jsonify({"message": "To-Do Item Stored Successfully!"})
